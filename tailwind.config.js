@@ -14,7 +14,22 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        'code::before': {
+                            content: '""'
+                        },
+                        'code::after': {
+                            content: '""'
+                        }
+                    }
+                }
+            }
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
+    darkMode: 'media'
 };
