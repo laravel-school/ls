@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
-        <loc>http://localhost/posts/configuration</loc>
-        <lastmod>2025-02-23T09:46:04+00:00</lastmod>
-
-            </url>
-    <url>
-        <loc>http://localhost/posts/index</loc>
-        <lastmod>2025-02-23T09:46:04+00:00</lastmod>
-
-            </url>
-    <url>
         <loc>http://localhost/posts/about/aboutme</loc>
         <lastmod>2025-02-23T10:20:22+00:00</lastmod>
 
@@ -21,38 +11,763 @@
 
             </url>
     <url>
-        <loc>http://localhost/posts/i-am-here-foo</loc>
-        <lastmod>2025-02-23T10:48:55+00:00</lastmod>
+        <loc>http://localhost/posts/understand-the-laravel-container-concept-with-real-life-example</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/write-phpunit-test-for-filament-php-resource</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/optimize-laravel-queries-reduce-memory-usage-for-faster-performance</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/way-to-reduce-email-bounce-and-spam-number-for-newsletter-in-laravel</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/testing-laravel-jobs-and-email-laravel-testing</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-i-improved-laravel-performance-2453-queries-down-to-4</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/optimize-laravel-database-query-from-2882-to-2-queries-only-laravel-refactoring</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/what-is-serialization-in-laravel</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-send-email-to-subscribers-when-you-publish-a-post-on-laravel</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/handling-rounding-millisecond-issue-with-diffinseconds-in%20time</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-build-newsletter-subscriber-system-on-laravel-10</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/write-test-for-laravel-task-scheduler</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-send-email-in-laravel-10</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-deploy-laravel-project-on-cpanel-2023</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/practical-guide-of-vim-as-primary-developer</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-php-call-magic-method-101</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/markdown-to-slides-with-marp-for-vs-code-a-comprehensive-tutorial-100</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/what-is-data-transfer-object-why-do-we-use-dto-in-laravel-99</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-integrate-mermaidjs-in-laravel-application-98</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/markdown-explained-benefits-uses-and-capabilities-97</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-increase-key-repeat-speed-for-mac-96</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-scout-wherenotnull-is-not-working-95</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/protecting-api-with-laravel-sanctum-in-tdd-approach-94</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-refactoring-part-1-93</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/re-understanding-people-misunderstandings-effective-communication-and-self-reflection-92</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/my-development-setup-91</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-activate-laravel-horizon-on-cloudways-90</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-mock-http-response-in-laravel-89</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-complex-conditional-validator-88</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/deep-dive-into-get-method-in-laravel-collection-87</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/re-best-practices-for-writing-code-comments-86</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/vs-code-vim-daily-practice-85</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-install-brew-on-mac-84</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/re-automatically-deploy-on-server-from-bitbucket-and-github-83</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-8-database-factory-not-found</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-install-rabbitmq-on-mac</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-install-vuejs-via-laravel-mix-on-non-laravel-project-80</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/integrate-paypal-plus-on-laravel-8-79</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-install-horizon-in-laravel-78</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/real-life-implementation-of-manager-pattern-on-laravel-77</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/understanding-the-ecosystem-of-laravel-autnetication-76</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-mixed-content-issue-and-broken-stylesheet-75</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/re-new-video-series-phpstorm-tips-with-christoph-rumpel-74</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-set-timezone-based-on-user-preference-73</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-define-custom-laravel-helper-function-72</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-migrate-sql-dump-file-in-laravel-db-seed-71</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/video-of-laracon-online-2020-70</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/tips-9-lessons-that-made-me-a-better-remote-worker-69</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/github-protips-tips-tricks-hacks-and-secrets-from-lee-reilly-68</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/learning-laravel-blueprint-a-rapid-component-development-package-67</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-integrate-followit-the-best-alternative-of-feedburner-66</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-code-refactoring-using-when-65</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-git-rebase-64</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/making-your-first-component-with-laravel-livewire-63</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-install-laravel-livewire-62</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/the-practical-orientation-of-laravel-passport-and-postman-61</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/a-practical-introduction-of-laravel-valet-60</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-set-up-the-virtual-host-on-macos-59</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/happy-new-year-58</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/understanding-autoload-and-namespace-in-php-57</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-increment-column-and-update-records-56</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-tests-invalid-argument-supplied-for-foreach-55</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/ignition-a-beautiful-error-page-for-laravel-apps-54</loc>
+        <lastmod>2025-02-23T11:17:12+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-run-a-specific-test-in-laravel-dusk-53</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-add-unique-email-in-laravel-faker-52</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-pagination-vs-chunk-51</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/eager-loading-in-laravel-query-builder-50</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/clean-architecture-in-php-part-1-49</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-each-function-in-laravel-48</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-i-stay-focused-and-productive-while-working-remotely-47</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/10-rules-to-code-like-nasa-applied-to-interpreted-languages-46</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-set-up-sub-domain-in-cloudways-45</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/welcome-to-the-next-design-44</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/implement-the-open-closed-principle-in-laravel-for-sign-up-43</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/avoid-inline-code-and-logic-write-clean-code-part-2-42</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/apply-the-open-closed-principle-in-laravel-part-2-41</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-find-any-file-in-github-repo-easily-40</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-reduce-condition-from-model-write-clean-code-part-2-39</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/reduce-if-else-in-php-write-clean-code-part-1-38</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-check-if-relationship-has-loaded-or-not-37</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/php-fatal-error-declaration-of-teststestcasesetup-must-be-compatible-36</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/macbook-update-php-version-globally-35</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-testing-how-to-do-login-php-unittest-34</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-php-array-sum-function-33</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/writing-your-first-php-unit-test-learning-phpunit-test-part-2-32</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/learning-phpunit-part-1-31</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/please-make-sure-you-have-the-correct-access-rights-30</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-upgrade-php-version-on-mac-29</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-dump-on-laravel-collection-28</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-dump-on-laravel-collection-27</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/docker-for-beginners-26</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-tumblr-api-integration-25</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-add-new-columns-to-the-existing-table-in-laravel-migration-24</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-migrate-failed-to-open-stream-no-such-file-or-directory-23</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-get-all-commit-list-of-github-repo-22</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-class-env-does-not-exist-21</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-do-we-rewrite-sclrship-20</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-use-put-or-patch-in-postman-19</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-add-extra-values-in-laravel-request-18</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-slug-in-laravel-factory-17</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/building-a-delighted-restful-api-with-laravel-16</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/an-introduction-to-laravel-policy-15</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/deep-diving-into-laravel-subquery-14</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/the-standard-approach-to-validate-laravel-form-request-13</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-laravel-transform-12</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-testing-starting-with-laravel-feature-testing-11</loc>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
 
             </url>
     <url>
         <loc>http://localhost/posts/how-to-upload-laravel-project-in-cpanel-10</loc>
-        <lastmod>2025-02-23T11:07:49+00:00</lastmod>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
 
             </url>
     <url>
         <loc>http://localhost/posts/laravel-php-artisan-route-list-command-9</loc>
-        <lastmod>2025-02-23T11:01:25+00:00</lastmod>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
 
             </url>
     <url>
         <loc>http://localhost/posts/lets-do-laravel-code-refactoring-8</loc>
-        <lastmod>2025-02-23T11:00:47+00:00</lastmod>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
 
             </url>
     <url>
         <loc>http://localhost/posts/laravel-delete-files-from-public-folder-7</loc>
-        <lastmod>2025-02-23T11:00:10+00:00</lastmod>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
 
             </url>
     <url>
         <loc>http://localhost/posts/some-necessary-git-command-for-every-developer-6</loc>
-        <lastmod>2025-02-23T10:59:58+00:00</lastmod>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
 
             </url>
     <url>
         <loc>http://localhost/posts/welcome-to-laravel-school-5</loc>
-        <lastmod>2025-02-23T11:05:25+00:00</lastmod>
+        <lastmod>2025-02-23T11:16:54+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-use-findorfail-for-configuration</loc>
+        <lastmod>2025-02-23T12:28:52+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-transfer-files-from-server-to-local-via-ssh</loc>
+        <lastmod>2025-02-23T12:40:27+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-11-sqlstate-hy000-general-errorr-1273-unknown-collation-utf8mb4_0900_ai_ci</loc>
+        <lastmod>2025-02-23T12:41:03+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/filamentphp-unique-ignore-during-editing</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/filamentphp-filter-record-using-tabs</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/filamentphp-testing-with-pest-call-to-undefined-function-pest</loc>
+        <lastmod>2025-02-23T20:40:43+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/z-plugin-for-fish-shell</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/switch-php-version-on-mac-with-fish-terminal</loc>
+        <lastmod>2025-02-23T12:53:14+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/list-of-the-format-for-date-commands-in-bash-script</loc>
+        <lastmod>2025-02-23T12:53:14+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/set-up-a-new-macbook</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-enable-mermaid-or-html-directive-with-marp-in-vs-code</loc>
+        <lastmod>2025-02-23T12:53:14+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-enable-key-repeats-on-your-mac</loc>
+        <lastmod>2025-02-23T12:53:14+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-set-fish-as-default-on-macos</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-get-paypal-access-token-with-curl</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/pass-query-string-in-laravel-pagination-globally</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-where-and-orwhere-condition-together-for-one-column</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-add-access-control-allow-origin-header-response-in-laravel</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/handle-laravel-cors-via-middleware</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/why-actingas-not-working-in-laravel-api-testing</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/fix-allowed-memory-size-exhausted-in-laravel-or-lumen</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/react-js-component-is-not-defined-no-undef</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-add-column-in-migration-file-after-in-any-specific-column</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-get-the-route-method-type-in-laravel</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-handle-guzzle-error</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/tinymce-error-this-domain-is-not-registered-with-tiny-cloud</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-get-content-of-tinymce-textarea-via-js</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/use-axios-globally-to-any-component-in-the-vuejs</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-add-bootstrap-in-vuejs</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-api-add-access-control-allow-origin-in-the-header-response</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/vuejs-error-unexpected-console-statement-no-console</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/php-storm-search-any-text-in-the-whole-project</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-vuejs-failed-to-mount-component-template-or-render-function-not-defined</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-remove-folders-with-ssh</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-get-a-domian-name-from-the-url</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-display-break-in-laravel-blade-properly</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-how-to-merge-two-eloquent-collections</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-use-str-plural-function-in-laravel</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/how-to-get-difference-between-two-dates-in-laravel</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/laravel-dusk-sessionnotcreatedexception-session-not-created</loc>
+        <lastmod>2025-02-23T12:28:40+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/upgrading-ojs-on-cpanel-a-step-by-step-guide</loc>
+        <lastmod>2025-02-23T20:40:14+00:00</lastmod>
 
             </url>
 </urlset>
