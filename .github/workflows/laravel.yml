@@ -47,7 +47,7 @@ jobs:
       - name: Create Database
         run: |
           mysql -uroot -ppassword -h127.0.0.1 -e 'CREATE DATABASE IF NOT EXISTS laravel;'
-      - name: Execute tests (Unit and Feature tests) via Pest
+      - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
           DB_CONNECTION: mysql
           DB_HOST: 127.0.0.1
@@ -55,7 +55,7 @@ jobs:
           DB_DATABASE: laravel
           DB_USERNAME: user
           DB_PASSWORD: password
-        run: vendor/bin/pest
+        run: vendor/bin/phpunit
 
   deploy:
     runs-on: ubuntu-latest
