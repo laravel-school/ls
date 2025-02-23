@@ -1,8 +1,7 @@
 ## 🎉 Writings
 
-- [Blogs](/posts)
-
-## 😎 Features
+- [Blogs](https://laravel-school.com/posts)
+- [Snippets](https://laravel-school.com/posts?category=Snippets)
 
 
 ## 😎 About

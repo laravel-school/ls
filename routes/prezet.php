@@ -26,7 +26,10 @@ Route::withoutMiddleware([
             ->name('prezet.ogimage')
             ->where('slug', '.*');
 
-        Route::get('posts', IndexController::class)
+        Route::get('/', IndexController::class)
+            ->name('prezet.index');
+
+        Route::get('/posts', IndexController::class)
             ->name('prezet.index');
 
         Route::get('posts/{slug}', ShowController::class)
