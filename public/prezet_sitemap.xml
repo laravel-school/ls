@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <url>
+        <loc>http://localhost/posts/configuration</loc>
+        <lastmod>2025-02-23T09:46:04+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/index</loc>
+        <lastmod>2025-02-23T09:46:04+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/about/aboutme</loc>
+        <lastmod>2025-02-23T10:20:22+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/about/uses</loc>
+        <lastmod>2025-02-23T10:19:36+00:00</lastmod>
+
+            </url>
+    <url>
+        <loc>http://localhost/posts/i-am-here-foo</loc>
+        <lastmod>2025-02-23T10:48:55+00:00</lastmod>
+
+            </url>
+</urlset>
