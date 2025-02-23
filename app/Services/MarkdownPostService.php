@@ -52,9 +52,13 @@ class MarkdownPostService
         $files = File::files($directory);
         $posts = collect($files)
             ->filter(fn($file) => $file->getExtension() === 'md')
+            ->sortByDesc(function ($file) {
+                // Extract the numeric part from the filename
+                $filename = $file->getFilenameWithoutExtension();
+                return (int) preg_replace('/[^0-9]/', '', $filename);
+            })
             ->map(fn($file) => $this->getPost($file->getFilenameWithoutExtension()))
-            ->filter()
-            ->sortByDesc('date');
+            ->filter();
 
         return $posts;
     }
@@ -65,6 +69,7 @@ class MarkdownPostService
     public function getPost($slug)
     {
         $filePath = storage_path("app/posts/{$slug}.md");
+        dump($filePath);
 
         if (!File::exists($filePath)) {
             return null;
