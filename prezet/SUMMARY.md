@@ -1,10 +1,11 @@
-## 🎉 Getting Started
+## 🎉 Writings
+
+- [Blogs](/posts)
 
 ## 😎 Features
 
 
-## 🕺 About
+## 😎 About
 
 - [About me](content/about/aboutme)
 - [Uses](content/about/uses)
-- [Welcome](content/about/welcome-to-laravel-school)
