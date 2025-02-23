@@ -27,6 +27,12 @@
         ></script>
         @vite(['resources/css/prezet.css'])
         @stack('jsonld')
+
+        <!-- Highlight.js (Auto-Detects Languages) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen">

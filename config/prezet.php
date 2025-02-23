@@ -1,5 +1,8 @@
 <?php
 
+use Phiki\Theme\Theme;
+use Phiki\CommonMark\PhikiExtension;
+
 return [
     /*
     |--------------------------------------------------------------------------
