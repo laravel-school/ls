@@ -69,12 +69,13 @@ class OgImage
 
         $this->text($canvas, strtoupper($document->frontmatter->category), 22, 80, 110, $ink['accent']);
 
-        $lines = $this->wrap($document->frontmatter->title, 54, self::WIDTH - 160);
+        [$size, $lines] = $this->fit($document->frontmatter->title);
+
         $y = 220;
 
-        foreach (array_slice($lines, 0, 4) as $line) {
-            $this->text($canvas, $line, 54, 80, $y, $ink['title']);
-            $y += 76;
+        foreach ($lines as $line) {
+            $this->text($canvas, $line, $size, 80, $y, $ink['title']);
+            $y += (int) round($size * 1.4);
         }
 
         $this->text($canvas, (string) config('blog.publisher.name'), 24, 80, self::HEIGHT - 70, $ink['muted']);
@@ -103,6 +104,33 @@ class OgImage
     private function text(GdImage $canvas, string $text, int $size, int $x, int $y, int $colour): void
     {
         imagettftext($canvas, $size, 0, $x, $y, $colour, $this->fontPath(), $text);
+    }
+
+    /**
+     * The largest size at which the whole title fits in the space available.
+     *
+     * A fixed size with the overflow cut off would mean a long title silently
+     * losing its ending — on a card whose only job is to carry that title. It
+     * shrinks instead, and only the very longest titles ever get smaller.
+     *
+     * @return array{0: int, 1: array<int, string>}
+     */
+    private function fit(string $title): array
+    {
+        $maxLines = 4;
+        $lines = [];
+        $size = 54;
+
+        foreach ([54, 48, 42, 36, 30] as $size) {
+            $lines = $this->wrap($title, $size, self::WIDTH - 160);
+
+            if (count($lines) <= $maxLines) {
+                return [$size, $lines];
+            }
+        }
+
+        // Nothing fits: keep the smallest size and as much as there is room for.
+        return [$size, array_slice($lines, 0, $maxLines)];
     }
 
     /**
