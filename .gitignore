@@ -27,3 +27,4 @@ yarn-error.log
 /public/sitemap.xml
 /public/search-index.json
 /storage/app/blog
+/public/og
