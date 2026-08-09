@@ -22,3 +22,8 @@ yarn-error.log
 /.vscode
 /.zed
 /storage/app/parity
+
+# Derived Artifacts: built on the server by `php artisan blog:build`.
+/public/sitemap.xml
+/public/search-index.json
+/storage/app/blog

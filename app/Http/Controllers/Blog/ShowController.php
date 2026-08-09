@@ -6,6 +6,7 @@ use App\Content\DocumentIndex;
 use App\Content\LinkedData;
 use App\Content\MarkdownRenderer;
 use App\Content\Navigation;
+use App\Content\OgImage;
 use App\Content\TableOfContents;
 use Illuminate\View\View;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -18,6 +19,7 @@ class ShowController
         private readonly TableOfContents $toc,
         private readonly Navigation $navigation,
         private readonly LinkedData $linkedData,
+        private readonly OgImage $ogImage,
     ) {}
 
     public function __invoke(string $slug): View
@@ -35,6 +37,7 @@ class ShowController
             'body' => $body,
             'headings' => $this->toc->from($body),
             'nav' => $this->navigation->sections(),
+            'ogImage' => $this->ogImage->urlFor($document),
             'linkedData' => json_encode($this->linkedData->for($document), JSON_UNESCAPED_SLASHES),
         ]);
     }

@@ -51,8 +51,30 @@ $compared = ['status', 'title', 'canonical', 'og_image', 'text', 'anchors', 'lin
  */
 $expected = json_decode((string) file_get_contents(__DIR__.'/parity-expected.json'), true);
 
+/**
+ * Boilerplate deliberately removed from every page. Rather than excusing the
+ * whole 'text' field site-wide — which would let a real content regression pass
+ * unnoticed on all 159 pages — these fragments are stripped from the baseline
+ * before comparing, so everything else stays strictly compared.
+ *
+ * @var array<int, string> $retired
+ */
+$retired = $expected['_retired_text'] ?? [];
+unset($expected['_retired_text']);
+
 $differences = [];
 $accounted = [];
+
+/** Same normalisation the snapshot uses: readable words only. */
+$readableText = static function (string $html) use ($retired): string {
+    $html = preg_replace('/<(script|style)\b[^>]*>.*?<\/\1>/si', ' ', $html);
+    $text = trim((string) preg_replace('/\s+/', ' ', html_entity_decode(strip_tags((string) $html))));
+
+    // Collapse again: removing a phrase leaves the spaces that surrounded it.
+    return trim((string) preg_replace('/\s+/', ' ', str_replace($retired, '', $text)));
+};
+
+$fileFor = static fn (string $url): string => $url === '/' ? 'index' : trim(str_replace('/', '_', $url), '_');
 
 foreach ($baseline as $url => $before) {
     if (! isset($now[$url])) {
@@ -62,12 +84,24 @@ foreach ($baseline as $url => $before) {
     }
 
     foreach ($compared as $field) {
-        if ($before[$field] === $now[$url][$field]) {
+        if ($field === 'text' && $retired !== []) {
+            $file = $fileFor($url).'.html';
+            $same = $readableText((string) file_get_contents("$baselineDir/$file"))
+                 === $readableText((string) file_get_contents("$current/$file"));
+
+            if ($same) {
+                continue;
+            }
+        } elseif ($before[$field] === $now[$url][$field]) {
             continue;
         }
 
-        if (isset($expected[$url][$field])) {
-            $accounted[$url][] = $field;
+        // '*' covers a change made deliberately across the whole site, so a
+        // single decision does not have to be restated 141 times.
+        $reason = $expected[$url][$field] ?? $expected['*'][$field] ?? null;
+
+        if ($reason !== null) {
+            $accounted[$url][$field] = $reason;
 
             continue;
         }
@@ -80,17 +114,26 @@ foreach (array_diff(array_keys($now), array_keys($baseline)) as $added) {
     $differences[$added][] = 'URL is new';
 }
 
-$unchanged = count($baseline) - count($differences) - count($accounted);
+$touched = array_unique([...array_keys($differences), ...array_keys($accounted)]);
+$unchanged = count($baseline) - count($touched);
 
 printf("%d URLs compared on: %s\n", count($baseline), implode(', ', $compared));
 printf("  %d identical\n", $unchanged);
 printf("  %d changed on purpose\n", count($accounted));
 printf("  %d regressions\n\n", count($differences));
 
+$byReason = [];
+
 foreach ($accounted as $url => $fields) {
-    foreach ($fields as $field) {
-        printf("intended  %s [%s]\n          %s\n", $url, $field, wordwrap($expected[$url][$field], 96, "\n          "));
+    foreach ($fields as $field => $reason) {
+        $byReason[$reason][] = "$url [$field]";
     }
+}
+
+// Group by reason: one decision that changed 141 pages should read as one
+// decision, not 141 lines of the same sentence.
+foreach ($byReason as $reason => $urls) {
+    printf("intended (%d URL%s)\n  %s\n  e.g. %s\n\n", count($urls), count($urls) === 1 ? '' : 's', wordwrap($reason, 94, "\n  "), $urls[0]);
 }
 
 if ($differences === []) {

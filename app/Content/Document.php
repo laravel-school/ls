@@ -71,6 +71,15 @@ readonly class Document
         return route('blog.show', $this->slug);
     }
 
+    /** @see RevisionDates for why the build replaces the modification time. */
+    public function withUpdatedAt(Carbon $updatedAt): self
+    {
+        return new self(
+            $this->slug, $this->key, $this->type, $this->filepath,
+            $this->hash, $this->createdAt, $updatedAt, $this->frontmatter,
+        );
+    }
+
     /**
      * A Page's address comes from where its file sits: content/about/uses.md is
      * served at about/uses.

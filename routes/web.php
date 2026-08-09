@@ -18,4 +18,10 @@ Route::permanentRedirect(
     '/posts/get-5-laravel-books-for-free-download-now',
 );
 
+/*
+ * The sitemap used to be a committed file named after the package that wrote
+ * it. Search engines were told about that URL, so it keeps working.
+ */
+Route::permanentRedirect('prezet_sitemap.xml', '/sitemap.xml');
+
 require __DIR__.'/blog.php';
