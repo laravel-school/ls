@@ -1,5 +1,5 @@
 @php
-    /* @var \BenBjurstrom\Prezet\Data\FrontmatterData $fm */
+    /* @var \App\Content\Frontmatter $fm */
 @endphp
 
 <!DOCTYPE html>

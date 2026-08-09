@@ -1,3 +1,4 @@
+@props(['title', 'description', 'url', 'image' => null])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -6,7 +7,16 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <x-seo::meta />
+        <title>{{ $title }}</title>
+        <meta property="og:title" content="{{ $title }}">
+        <meta property="og:description" content="{{ $description }}">
+        <meta name="description" content="{{ $description }}">
+        <meta property="og:type" content="website">
+        @if ($image)
+            <meta property="og:image" content="{{ $image }}">
+        @endif
+        <meta property="og:url" content="{{ $url }}">
+        <link rel="canonical" href="{{ $url }}">
 
         <!-- Scripts -->
         <script
@@ -36,8 +46,8 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen">
-            <x-prezet::alpine>
-                <x-prezet::header />
+            <x-blog::alpine>
+                <x-blog::header />
                 <div
                     class="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12"
                 >
@@ -58,7 +68,7 @@
                         {{ $right }}
                     @endif
                 </div>
-            </x-prezet::alpine>
+            </x-blog::alpine>
         </div>
     </body>
 </html>
