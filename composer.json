@@ -7,11 +7,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "benbjurstrom/prezet": "1.0.0-rc5",
-        "erusev/parsedown": "^1.7",
         "laravel/framework": "^11.31",
-        "laravel/tinker": "^2.9",
-        "spatie/yaml-front-matter": "^2.1"
+        "laravel/tinker": "^2.9"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

@@ -1,0 +1,11 @@
+{
+  "/": {
+    "text": "The old feed listed all 157 Documents, including the two About Pages, so the homepage advertised 'Showing 1 to 4 of 157 results'. Pages have no place in a chronological feed, so the count is now 155."
+  },
+  "/posts": {
+    "text": "Same as '/': the two About Pages no longer appear in the feed."
+  },
+  "/posts/how-to-build-newsletter-subscriber-system-on-laravel-10": {
+    "og_image": "posts/107.md has 'image: \"\"', which the old site turned into <meta property=\"og:image\" content=\"http://localhost\"> — pointing social networks at the homepage's HTML as though it were an image. The tag is now omitted when there is no image."
+  }
+}

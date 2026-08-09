@@ -3,31 +3,29 @@
     /* @var array $nav */
     /* @var array $headings */
     /* @var string $linkedData */
-    /* @var \BenBjurstrom\Prezet\Data\DocumentData $document */
+    /* @var \App\Content\Document $document */
 @endphp
 
-<x-prezet::template>
-    @seo([
-        'title' => $document->frontmatter->title,
-        'description' => $document->frontmatter->excerpt,
-        'url' => route('prezet.show', ['slug' => $document->slug]),
-        'image' => url($document->frontmatter->image),
-    ])
-
+<x-blog::template
+    :title="$document->frontmatter->title"
+    :description="$document->frontmatter->excerpt"
+    :url="route('blog.show', ['slug' => $document->slug])"
+    :image="$document->frontmatter->image ? url($document->frontmatter->image) : null"
+>
     @push('jsonld')
         <script type="application/ld+json">{!! $linkedData !!}</script>
     @endpush
 
     {{-- Left Sidebar --}}
     <x-slot name="left">
-        <x-prezet::sidebar :nav="$nav" />
+        <x-blog::sidebar :nav="$nav" />
     </x-slot>
 
     {{-- Main Content --}}
     <article>
         <header class="mb-9 space-y-1">
             <p class="font-display text-sm font-medium text-primary-600">
-                {{ $document->category }}
+                {{ $document->frontmatter->category }}
             </p>
             <h1
                 class="font-display text-4xl font-medium tracking-tight text-gray-900"
@@ -91,4 +89,4 @@
             </nav>
         </div>
     </x-slot>
-</x-prezet::template>
+</x-blog::template>

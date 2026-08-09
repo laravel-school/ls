@@ -2,18 +2,21 @@
     /* @var array $nav */
     /* @var array|null|string $currentTag */
     /* @var array|null|string $currentCategory */
-    /* @var \Illuminate\Support\Collection<int,\BenBjurstrom\Prezet\Data\DocumentData> $articles */
+    /* @var \Illuminate\Support\Collection<int,\App\Content\Document> $documents */
 @endphp
 
-<x-prezet::template>
-    @seo([
-        'title' => 'Laravel School | Thouhedul Islam Suchi | Tisuchi | Learn Laravel, PHP, Vue.js',
-        'description' =>
-            'Thouhedul Islam Suchi is the main author of Laravel School | Get started with Laravel, Vue.js, and modern web technologies. Laravel School offers developer tutorials that cover all the essential topics.',
-        'url' => route('prezet.index'),
-    ])
+<x-blog::template
+    title="Laravel School | Thouhedul Islam Suchi | Tisuchi | Learn Laravel, PHP, Vue.js"
+    description="Thouhedul Islam Suchi is the main author of Laravel School | Get started with Laravel, Vue.js, and modern web technologies. Laravel School offers developer tutorials that cover all the essential topics."
+    {{-- Both '/' and '/posts' serve this feed, so one of them has to be the
+         canonical one. It has always been '/posts' — not by choice, but because
+         the old routes shared a name and the later registration won. Preserved
+         deliberately: changing which URL search engines consolidate on is a
+         decision to take on its own, not a side effect of replacing a renderer. --}}
+    :url="route('blog.posts')"
+>
     <x-slot name="left">
-        <x-prezet::sidebar :nav="$nav" />
+        <x-blog::sidebar :nav="$nav" />
     </x-slot>
     <section>
         <div class="divide-y divide-gray-200">
@@ -35,7 +38,7 @@
                             >
                                 {{ \Illuminate\Support\Str::title($currentTag) }}
                                 <a
-                                    href="{{ route('prezet.index', array_filter(request()->except('tag'))) }}"
+                                    href="{{ route('blog.index', array_filter(request()->except('tag'))) }}"
                                     class="group relative -mr-1 h-3.5 w-3.5 rounded-xs hover:bg-gray-500/20"
                                 >
                                     <span class="sr-only">Remove</span>
@@ -56,7 +59,7 @@
                             >
                                 {{ $currentCategory }}
                                 <a
-                                    href="{{ route('prezet.index', array_filter(request()->except('category'))) }}"
+                                    href="{{ route('blog.index', array_filter(request()->except('category'))) }}"
                                     class="group relative -mr-1 h-3.5 w-3.5 rounded-xs hover:bg-gray-500/20"
                                 >
                                     <span class="sr-only">Remove</span>
@@ -74,9 +77,9 @@
                 </div>
             </div>
             <ul class="divide-y divide-gray-200">
-                @foreach ($articles as $article)
+                @foreach ($documents as $document)
                     <li class="py-12">
-                        <x-prezet::article :article="$article" />
+                        <x-blog::article :document="$document" />
                     </li>
                 @endforeach
             </ul>
@@ -85,4 +88,4 @@
             </div>
         </div>
     </section>
-</x-prezet::template>
+</x-blog::template>
