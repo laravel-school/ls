@@ -10,7 +10,7 @@
     :title="$document->frontmatter->title"
     :description="$document->frontmatter->excerpt"
     :url="route('blog.show', ['slug' => $document->slug])"
-    :image="$document->frontmatter->image ? url($document->frontmatter->image) : null"
+    :image="$ogImage"
 >
     @push('jsonld')
         <script type="application/ld+json">{!! $linkedData !!}</script>

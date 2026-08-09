@@ -7,59 +7,53 @@ on:
     branches: [ "main" ]
 
 jobs:
-  laravel-tests:
+  test:
     runs-on: ubuntu-latest
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: laravel
-          MYSQL_USER: user
-          MYSQL_PASSWORD: password
-        ports:
-          - 3306:3306
-        options: >-
-          --health-cmd="mysqladmin ping"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
-
     steps:
-      - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          extensions: mbstring, xml, ctype, iconv, mysql
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+          extensions: mbstring, xml, ctype, iconv, dom, gd
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'  # Specify your Node.js version
+          node-version: '20'
+
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-      - name: Install PHP Dependencies
-        run: composer install --prefer-dist --no-progress --no-scripts
-      - name: Install NPM Dependencies
-        run: npm install
-      - name: Build Assets
-        run: npm run build  # Command to build your assets
+
+      - name: Install PHP dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build assets
+        run: npm run build
+
       - name: Generate key
         run: php artisan key:generate
-      - name: Create Database
-        run: |
-          mysql -uroot -ppassword -h127.0.0.1 -e 'CREATE DATABASE IF NOT EXISTS laravel;'
-      - name: Execute tests (Unit and Feature tests) via PHPUnit
-        env:
-          DB_CONNECTION: mysql
-          DB_HOST: 127.0.0.1
-          DB_PORT: 3306
-          DB_DATABASE: laravel
-          DB_USERNAME: user
-          DB_PASSWORD: password
+
+      # Every Document parses and describes itself correctly. This is the check
+      # that keeps a malformed Document from reaching the server, where it would
+      # fail the build and block the deploy queue behind it.
+      - name: Validate Documents
+        run: php artisan blog:validate
+
+      # A full build: the Index, sitemap, search index and social cards, plus a
+      # render of all 157 Documents. If anything no longer renders, it fails
+      # here rather than on a reader's page load.
+      - name: Build
+        run: php artisan blog:build
+
+      - name: Tests
         run: vendor/bin/phpunit
 
   deploy:
     runs-on: ubuntu-latest
-    needs: laravel-tests
+    needs: test
     if: success() && github.ref == 'refs/heads/main'
     steps:
       - name: Trigger deployment
@@ -67,4 +61,4 @@ jobs:
           FORGE_SERVER_ID: ${{ secrets.FORGE_SERVER_ID }}
           FORGE_SITE_ID: ${{ secrets.FORGE_SITE_ID }}
           FORGE_DEPLOYMENT_TOKEN: ${{ secrets.FORGE_DEPLOYMENT_TOKEN }}
-        run: curl -sS https://forge.laravel.com/servers/${{ env.FORGE_SERVER_ID }}/sites/${{ env.FORGE_SITE_ID }}/deploy/http?token=${{ env.FORGE_DEPLOYMENT_TOKEN }}
+        run: curl -sS --fail "https://forge.laravel.com/servers/${FORGE_SERVER_ID}/sites/${FORGE_SITE_ID}/deploy/http?token=${FORGE_DEPLOYMENT_TOKEN}"

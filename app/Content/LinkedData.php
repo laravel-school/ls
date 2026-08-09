@@ -2,12 +2,15 @@
 
 namespace App\Content;
 
+
 /**
  * The schema.org Article description embedded in a Document's page, which is
  * what search engines and social cards read instead of the prose.
  */
 class LinkedData
 {
+    public function __construct(private readonly OgImage $ogImage) {}
+
     /**
      * @return array<string, mixed>
      */
@@ -53,16 +56,6 @@ class LinkedData
      */
     private function image(Document $document): string
     {
-        $image = $document->frontmatter->image;
-
-        if (blank($image)) {
-            return $this->publisher()['image'];
-        }
-
-        if (preg_match('#^[a-z]+://#i', $image)) {
-            return $image;
-        }
-
-        return preg_replace('#^(https?://[^/]+).*$#', '$1', $this->publisher()['url']).$image;
+        return $this->ogImage->urlFor($document) ?? $this->publisher()['image'];
     }
 }

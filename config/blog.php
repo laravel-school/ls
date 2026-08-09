@@ -102,6 +102,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Social cards
+    |--------------------------------------------------------------------------
+    |
+    | Cards are drawn with GD at build time for Documents that carry no image of
+    | their own. GD needs a real font file on disk — a webfont URL is no use to
+    | it. Without one, card generation is skipped and those Documents simply
+    | have no og:image, exactly as before.
+    |
+    */
+
+    'og' => [
+        'font' => base_path('resources/fonts/Inter-SemiBold.ttf'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Structured data
     |--------------------------------------------------------------------------
     */

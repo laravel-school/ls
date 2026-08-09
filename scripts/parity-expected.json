@@ -7,5 +7,11 @@
   },
   "/posts/how-to-build-newsletter-subscriber-system-on-laravel-10": {
     "og_image": "posts/107.md has 'image: \"\"', which the old site turned into <meta property=\"og:image\" content=\"http://localhost\"> — pointing social networks at the homepage's HTML as though it were an image. The tag is now omitted when there is no image."
-  }
+  },
+  "*": {
+    "og_image": "141 Documents pointed 'image:' at /src/content/images/default_image.jpeg — an Astro-era path for a file that has never existed in this repository, so every share of them showed a broken card. The dead lines are gone. Those Documents now use a social card drawn at build time, or no og:image at all when no font is installed to draw one."
+  },
+  "_retired_text": [
+    "Powered by Prezet"
+  ]
 }
